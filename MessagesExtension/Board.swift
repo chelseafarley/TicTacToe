@@ -69,7 +69,7 @@ class Board {
     
     func checkResult(column: Int, row: Int) {
         var checkForwardsDiagonal = row == column;
-        var checkBackwardsDiagonal = row + column == 3;
+        var checkBackwardsDiagonal = row + column == 2;
         var checkRow = true;
         var checkCol = true;
         
@@ -87,7 +87,7 @@ class Board {
             }
 
             if (checkCol) {
-                checkCol = checkSquare(column: row, row: i)
+                checkCol = checkSquare(column: column, row: i)
             }
         }
 
