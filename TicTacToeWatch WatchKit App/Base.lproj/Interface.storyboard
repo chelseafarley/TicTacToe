@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19455" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19454"/>
+    </dependencies>
+    <scenes>
+        <!--MainMenu-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="MainMenu" id="AgC-eL-Hgc" customClass="WKUserNotificationInterfaceController">
+                    <items>
+                        <label width="1" height="55" alignment="left" text="Tic Tac Toe" textAlignment="center" id="3LE-Am-4Q6">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="center" title="Play" id="tP3-HL-vhE">
+                            <connections>
+                                <segue destination="FhX-vB-YXn" kind="push" id="5es-e7-Vb9"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="30.357142857142858"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="KaF-K9-bl3">
+            <objects>
+                <controller id="FhX-vB-YXn" customClass="InterfaceController" customModule="TicTacToeWatch_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="315" y="30"/>
+        </scene>
+    </scenes>
+</document>
