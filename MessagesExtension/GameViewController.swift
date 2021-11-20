@@ -55,4 +55,8 @@ extension GameViewController: GameSceneDelegate {
             gameWon: board.gameWon,
             snapshot: getGameSnapshot())
     }
+    
+    func getSKSpriteNode() -> SKSpriteNode {
+        return SKSpriteNode(imageNamed: board.activePlayer)
+    }
 }

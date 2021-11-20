@@ -27,7 +27,22 @@
         <!--Interface Controller-->
         <scene sceneID="KaF-K9-bl3">
             <objects>
-                <controller id="FhX-vB-YXn" customClass="InterfaceController" customModule="TicTacToeWatch_WatchKit_App" customModuleProvider="target"/>
+                <controller id="FhX-vB-YXn" customClass="InterfaceController" customModule="TicTacToeWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <spriteKitScene alignment="left" id="eoP-lW-1hW">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="qpO-En-Teg">
+                                    <connections>
+                                        <action selector="onTap:" destination="FhX-vB-YXn" id="GX1-Xc-NPp"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                        </spriteKitScene>
+                    </items>
+                    <connections>
+                        <outlet property="skScene" destination="eoP-lW-1hW" id="1XO-vW-uvs"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="315" y="30"/>
         </scene>

@@ -1,10 +1,15 @@
-import Messages
-
 class Board {
     private var pieces: Array2D<Piece>!
     private var _setup: String!
     private var _activePlayer: String!
     private var _gameWon: Bool!
+    private var _isWatch: Bool!
+    
+    var isWatch: Bool {
+        get {
+            return _isWatch
+        }
+    }
     
     var gameWon: Bool {
         get {
@@ -94,33 +99,11 @@ class Board {
         _gameWon = checkForwardsDiagonal || checkBackwardsDiagonal || checkRow || checkCol;
     }
 
-    init(message: MSMessage?) {
-        guard let message = message, let url = message.url else {
-            setup = ""
-            activePlayer = "X"
-            _gameWon = false
-            setUpBoard(with: setup)
-            return
-        }
-
-        if let components = URLComponents(url: url, resolvingAgainstBaseURL: false) {
-            for item in components.queryItems! {
-                if item.name == "setup" {
-                    setup = item.value!
-                    continue
-                }
-
-                if item.name == "player" {
-                    activePlayer = item.value!
-                    continue
-                }
-                
-                if item.name == "gameWon" {
-                    _gameWon = Bool(item.value!)
-                    continue
-                }
-            }
-        }
+    init(setup: String, activePlayer: String, gameWon: Bool, isWatch: Bool) {
+        self.setup = setup
+        self._gameWon = gameWon
+        self.activePlayer = activePlayer
+        self._isWatch = isWatch
 
         setUpBoard(with: setup)
     }

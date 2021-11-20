@@ -29,12 +29,42 @@ class MessagesViewController: MSMessagesAppViewController {
 
         presentVC(for: conversation, with: presentationStyle)
     }
+    
+    private func getBoard(message: MSMessage?) -> Board {
+        var setup = ""
+        var activePlayer = "X"
+        var gameWon = false
+        guard let message = message, let url = message.url else {
+            return Board(setup: setup, activePlayer: activePlayer, gameWon: gameWon, isWatch: false)
+        }
+
+        if let components = URLComponents(url: url, resolvingAgainstBaseURL: false) {
+            for item in components.queryItems! {
+                if item.name == "setup" {
+                    setup = item.value!
+                    continue
+                }
+
+                if item.name == "player" {
+                    activePlayer = item.value!
+                    continue
+                }
+                
+                if item.name == "gameWon" {
+                    gameWon = Bool(item.value!)!
+                    continue
+                }
+            }
+        }
+        
+        return Board(setup: setup, activePlayer: activePlayer, gameWon: gameWon, isWatch: false)
+    }
 
     private func presentVC(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
         if presentationStyle == .compact {
             controller = instantiateMenuVC()
         } else {
-            let board = Board(message: conversation.selectedMessage)
+            let board = getBoard(message: conversation.selectedMessage)
             controller = instantiateGameVC(with: board)
         }
 

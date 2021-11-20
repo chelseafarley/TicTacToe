@@ -15,6 +15,11 @@
 		5EFF6511274835FD002179DB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFF6510274835FD002179DB /* ComplicationController.swift */; };
 		5EFF6513274835FF002179DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EFF6512274835FF002179DB /* Assets.xcassets */; };
 		5EFF652227484057002179DB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EFF652027484057002179DB /* Interface.storyboard */; };
+		5EFF652827488A56002179DB /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2337D1D70ED55005284B1 /* Array2D.swift */; };
+		5EFF652927488A5B002179DB /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B233831D70EE3A005284B1 /* Board.swift */; };
+		5EFF652A27488A66002179DB /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B233851D70EE58005284B1 /* Piece.swift */; };
+		5EFF652C274896D9002179DB /* SceneBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFF652B274896D9002179DB /* SceneBase.swift */; };
+		5EFF652D27489709002179DB /* SceneBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFF652B274896D9002179DB /* SceneBase.swift */; };
 		A10BC2751D7C3F6800D2FA8D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10BC2741D7C3F6800D2FA8D /* RoundedButton.swift */; };
 		A10EE8BE1D70D4F80044A5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10EE8BD1D70D4F80044A5E1 /* Assets.xcassets */; };
 		A10EE8C51D70D4F80044A5E1 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A10EE8C41D70D4F80044A5E1 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -101,6 +106,7 @@
 		5EFF6512274835FF002179DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EFF6514274835FF002179DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EFF652127484057002179DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		5EFF652B274896D9002179DB /* SceneBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBase.swift; sourceTree = "<group>"; };
 		A10BC2741D7C3F6800D2FA8D /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		A10EE8BA1D70D4F80044A5E1 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10EE8BD1D70D4F80044A5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -238,6 +244,7 @@
 			children = (
 				A1B2337D1D70ED55005284B1 /* Array2D.swift */,
 				A1B2337F1D70ED82005284B1 /* GameScene.swift */,
+				5EFF652B274896D9002179DB /* SceneBase.swift */,
 				A1B233831D70EE3A005284B1 /* Board.swift */,
 				A1B233851D70EE58005284B1 /* Piece.swift */,
 			);
@@ -446,8 +453,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EFF650F274835FD002179DB /* ExtensionDelegate.swift in Sources */,
+				5EFF652A27488A66002179DB /* Piece.swift in Sources */,
 				5EFF650D274835FD002179DB /* InterfaceController.swift in Sources */,
+				5EFF652D27489709002179DB /* SceneBase.swift in Sources */,
+				5EFF652927488A5B002179DB /* Board.swift in Sources */,
 				5EFF6511274835FD002179DB /* ComplicationController.swift in Sources */,
+				5EFF652827488A56002179DB /* Array2D.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +474,7 @@
 				A1B233841D70EE3A005284B1 /* Board.swift in Sources */,
 				A1718A5A1D70DB7B00CC952A /* MenuViewController.swift in Sources */,
 				A10EE8CD1D70D4F80044A5E1 /* MessagesViewController.swift in Sources */,
+				5EFF652C274896D9002179DB /* SceneBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
